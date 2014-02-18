@@ -1,3 +1,3 @@
 lab4
 ====
-This is the first version of README.
+This is the second version of README.
