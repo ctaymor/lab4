@@ -9,6 +9,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * An {@code Activity} that displays a list of the names of people in CS 180A.
+ * If a name is clicked on, a confirmatory {@link Toast} will be displayed.
+ * 
+ * @author ellen.spertus@gmail.com (Ellen Spertus)
+ * 
+ * @see Person
+ */
 public class MainActivity extends Activity implements ListView.OnItemClickListener  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
