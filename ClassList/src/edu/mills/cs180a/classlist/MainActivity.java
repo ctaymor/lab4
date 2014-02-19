@@ -27,7 +27,7 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
         String name = Person.everyone[position].toString();
         Toast.makeText(this, "Clicked on: " + name, Toast.LENGTH_LONG).show();
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/html");
+        intent.setType("message/rfc822");
         String [] emails = {Person.everyone[position].getEmail()};
         intent.putExtra(Intent.EXTRA_EMAIL, emails);
         startActivity(Intent.createChooser(intent, "Send Email"));
