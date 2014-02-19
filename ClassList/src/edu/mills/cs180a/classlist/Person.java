@@ -2,22 +2,25 @@ package edu.mills.cs180a.classlist;
 
 public class Person {
     final static Person[] everyone = {
-        new Person("AJ", "Parmidge", "aparmidge@mills.edu"),
-        new Person("Caroline", "Taymor", "ctaymor@gmail.com"),
-        new Person("Ching", "Yu", "cyu@mills.edu"),
-        new Person("Christie", "Yeh", "cyeh@mills.edu"),
-        new Person("Colin", "Lockard", "clockard@mills.edu"),
-        new Person("Ellen", "Spertus", "ellen.spertus@gmail.com"),
-        new Person("Fiona", "Robinson", "frobinson@mills.edu"),
-        new Person("Michele", "Collender", "mcollender@mills.edu"),
-        new Person("Renee", "Johnston", "renee.johnston1149@gmail.com"),
-        new Person("Robert", "Andrews", "roandrews@mills.edu"),
-        new Person("Taurin", "Barrera", "taurin.barrera@mills.edu"),
-        new Person("Trevor", "Adams", "trevorbadams@gmail.com")
+        new Person("AJ", "Parmidge", "aparmidge@mills.edu", R.drawable.aj),
+        new Person("Caroline", "Taymor", "ctaymor@gmail.com", R.drawable.caroline),
+        new Person("Ching", "Yu", "cyu@mills.edu", R.drawable.ching),
+        new Person("Christie", "Yeh", "cyeh@mills.edu", R.drawable.christie),
+        new Person("Colin", "Lockard", "clockard@mills.edu", R.drawable.colin),
+        // TODO: add proper image for ellen
+        new Person("Ellen", "Spertus", "ellen.spertus@gmail.com", R.drawable.ic_launcher),
+        new Person("Fiona", "Robinson", "frobinson@mills.edu", R.drawable.fiona),
+        new Person("Michele", "Collender", "mcollender@mills.edu", R.drawable.michele),
+        new Person("Renee", "Johnston", "renee.johnston1149@gmail.com", R.drawable.renee),
+        new Person("Robert", "Andrews", "roandrews@mills.edu", R.drawable.robert),
+        new Person("Taurin", "Barrera", "taurin.barrera@mills.edu", R.drawable.taurin),
+        // TODO: add proper image for trevor
+        new Person("Trevor", "Adams", "trevorbadams@gmail.com", R.drawable.ic_launcher)
     };
     private String mFirstName;
     private String mLastName;
     private String mEmail;
+    private int mImage;
     
     /**
      * Constructs a new {@code Person}.
@@ -25,11 +28,13 @@ public class Person {
      * @param first the first name
      * @param last the last name
      * @param email the email address
+     * @param imageId the id number of the picture
      */
-    public Person(String first, String last, String email) {
+    public Person(String first, String last, String email, int imageId) {
         mFirstName = first;
         mLastName = last;
         mEmail = email;
+        mImage = imageId;
     }
     
     /**
@@ -57,6 +62,15 @@ public class Person {
      */
     public String getEmail() {
         return mEmail;
+    }
+    
+    /**
+     * Gets the image id
+     *
+     * @return the image id
+     */
+    public int getImage() {
+        return mImage;
     }
     
     @Override
