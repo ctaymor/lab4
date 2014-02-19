@@ -2,6 +2,7 @@
 package edu.mills.cs180a.classlist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,5 +26,10 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
         String name = Person.everyone[position].toString();
         Toast.makeText(this, "Clicked on: " + name, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/html");
+        String [] emails = {Person.everyone[position].getEmail()};
+        intent.putExtra(Intent.EXTRA_EMAIL, emails);
+        startActivity(Intent.createChooser(intent, "Send Email"));
     }
 }
