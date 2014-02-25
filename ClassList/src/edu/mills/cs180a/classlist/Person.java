@@ -4,6 +4,7 @@ package edu.mills.cs180a.classlist;
  * Information about a person (student or teacher) in CS 180A: Mobile Application Development.
  * 
  * @author ellen.spertus@gmail.com (Ellen Spertus)
+ * @author ctaymor@gmail.com (Caroline Taymor)
  */
 public class Person {
     final static Person[] everyone = {

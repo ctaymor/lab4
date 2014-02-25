@@ -13,10 +13,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * An {@code Activity} that displays a list of the names of people in CS 180A.
- * If a name is clicked on, a confirmatory {@link Toast} will be displayed.
+ * An {@code Activity} that displays a list of the names and pictures of people in CS 180A.
+ * If a name is clicked on, a box pops up asking what app the user would like to use to 
+ * send an email, and creates an email with that person's email address in the to send field.
  * 
  * @author ellen.spertus@gmail.com (Ellen Spertus)
+ * @author ctaymor@gmail.com (Caroline Taymor)
  * 
  * @see Person
  */
@@ -41,7 +43,11 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
         intent.putExtra(Intent.EXTRA_EMAIL, emails);
         startActivity(Intent.createChooser(intent, "Send Email"));
     }
-    
+    /**
+     * A class which extends ArrayAdapter<Person> to handle a name(text) and icon.
+     * @author ctaymor@gmail.com (Caroline Taymor)
+     *
+     */
     class IconicAdapter extends ArrayAdapter<Person> {
         IconicAdapter() {
             super(MainActivity.this, R.layout.row, R.id.name, Person.everyone);
@@ -51,7 +57,6 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
         public View getView(int position, View convertView, ViewGroup parent) {
             View row = super.getView(position, convertView, parent);
             ImageView icon = (ImageView) row.findViewById(R.id.icon);
-            
             icon.setImageResource(Person.everyone[position].getImage());
             
             return row;
