@@ -16,8 +16,6 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_launcher"
         android:padding="5dp" />
-    
 
 </LinearLayout>

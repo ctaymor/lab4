@@ -1,7 +1,6 @@
 
 package edu.mills.cs180a.classlist;
 
-import android.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -45,7 +44,7 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
     
     class IconicAdapter extends ArrayAdapter<Person> {
         IconicAdapter() {
-            super(MainActivity.this, R.layout.row, Person.everyone);
+            super(MainActivity.this, R.layout.row, R.id.name, Person.everyone);
         }
         
         @Override
