@@ -1,1 +1,26 @@
 Reflections on lab:
+Overall, I found this lab fairly easy but interesting. There were a few
+spots where I got stuck for a while though. For a long time, all my 
+calls to resources via R.layout.row, for example, or R.id.name, were not compiling.
+The program was searching for those files in android.R which I had imported.
+Since we were no longer using any files from that library, I removed it and it worked fine.
+I am curious (and never figured out) how you would specify something from a local R file vs
+the android.R file if you need to use both and need to import that library.
+
+I also got stuck for a while with the constructor of ArrayAdaptor (well, my
+extension of it). My program wasn't running, the logs said it was because of an 
+IllegalStateException, and that ArrayAdapter requires the resource ID to be
+a text view. I tried a bunch of different stuff, but it didn't occur to me to
+check whether there was an alternate constructor which took both the layout (row.xml)
+and the text view. I set it aside for a day or two and when I came back you had added the
+information about the 4 argument constructor to the lab.
+
+I do feel like I learned a lot though. It was frustrating but good to have to work on creating
+our ArrayAdapter from the instructions in the Busy Coder's Guide. What I mean is, I appreciated the
+challenge of having to build it myself with similar code, but not exactly the same. It meant I 
+tried a whole bunch more things and made more mistakes, and then straightened them out eventually,
+but I learned more doing so than with Big Nerd Ranch book's specific coding instructions. I do
+feel like I've learned a lot from the Big Nerd Ranch book, but I enjoyed the greater challenge.
+I especially enjoyed the challenge of such sparse lab instructions, although I didn't
+finish the lab until after you had added more in-depth instructions. I learned a lot in the process
+though!
